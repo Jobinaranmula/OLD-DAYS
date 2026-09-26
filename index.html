@@ -2,12 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+
   <meta name="viewport"
         content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-
-  <meta name="theme-color" content="#000000">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="mobile-web-app-capable" content="yes">
 
   <title>OLD DAYS</title>
 
@@ -16,46 +13,152 @@
 
 <body>
 
-  <main class="memory-screen">
+  <!-- SCREEN 2 -->
+  <main class="screen2">
 
     <!-- Background -->
-    <div class="background"></div>
+    <div class="screen2-overlay"></div>
 
-    <!-- Dark cinematic overlay -->
-    <div class="overlay"></div>
+    <div class="screen2-content">
 
-    <!-- Main content -->
-    <section class="intro">
-
-      <p class="small-title">TERRITORY BOYS PRESENTS</p>
+      <div class="memory-top">
+        TERRITORY BOYS PRESENTS
+      </div>
 
       <h1>OLD DAYS</h1>
 
-      <p class="subtitle">
-        Friends • Cricket • Rain • Memories
+      <p class="memory-subtitle">
+        Friends · Cricket · Rain · Memories
       </p>
 
-      <button id="enterBtn" class="enter-btn">
-        ENTER MEMORIES
-      </button>
 
-    </section>
+      <!-- MAIN MP3 PLAYER -->
+      <div class="main-player">
 
-    <!-- Instagram -->
-    <a
-      class="instagram"
-      href="https://www.instagram.com/jobin_skariah/"
-      target="_blank"
-      rel="noopener">
-      @jobin_skariah
-    </a>
+        <button id="mainPlay">
+          ▶ PLAY
+        </button>
 
-    <!-- Bottom credit -->
-    <div class="credit">
-      TERRITORY BOYS
+        <audio id="mainAudio" src="old-days.mp3"></audio>
+
+      </div>
+
+
+      <!-- AMBIENT SOUND CONTROLS -->
+      <div class="sound-panel">
+
+        <!-- NATURE -->
+        <div class="sound-row">
+
+          <div class="sound-name">
+            🌿 Nature
+          </div>
+
+          <button
+            class="toggle"
+            data-audio="natureAudio">
+            ON
+          </button>
+
+          <input
+            type="range"
+            min="0"
+            max="100"
+            value="50"
+            data-volume="natureAudio">
+
+        </div>
+
+
+        <!-- RAIN -->
+        <div class="sound-row">
+
+          <div class="sound-name">
+            🌧️ Rain
+          </div>
+
+          <button
+            class="toggle"
+            data-audio="rainAudio">
+            ON
+          </button>
+
+          <input
+            type="range"
+            min="0"
+            max="100"
+            value="35"
+            data-volume="rainAudio">
+
+        </div>
+
+
+        <!-- CRICKET -->
+        <div class="sound-row">
+
+          <div class="sound-name">
+            🏏 Cricket
+          </div>
+
+          <button
+            class="toggle"
+            data-audio="cricketAudio">
+            ON
+          </button>
+
+          <input
+            type="range"
+            min="0"
+            max="100"
+            value="45"
+            data-volume="cricketAudio">
+
+        </div>
+
+      </div>
+
+
+      <!-- BACKGROUND AUDIO -->
+
+      <audio
+        id="natureAudio"
+        src="nature.mp3"
+        loop>
+      </audio>
+
+      <audio
+        id="rainAudio"
+        src="rain.mp3"
+        loop>
+      </audio>
+
+      <audio
+        id="cricketAudio"
+        src="cricket.mp3"
+        loop>
+      </audio>
+
+
     </div>
 
+
+    <!-- FOOTER -->
+    <footer class="footer">
+
+      <div>
+        TERRITORY BOYS
+      </div>
+
+      <a
+        href="https://www.instagram.com/jobn_skariah/"
+        target="_blank">
+        @jobn_skariah
+      </a>
+
+    </footer>
+
   </main>
+
 
   <script src="script.js"></script>
 
